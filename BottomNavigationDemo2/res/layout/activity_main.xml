@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout 
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/transparent">
+        
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="信息"
+            android:textColor="@color/text_gray"
+            android:textSize="18sp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_gray"
+            />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        >
+        
+        <RelativeLayout 
+            android:id="@+id/ly_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+                <TextView 
+                    android:id="@+id/home"
+                    android:drawableTop="@drawable/home_selector"
+                    style="@style/tab_menu_text"
+                    android:text="home"
+                    />
+                <TextView 
+                    android:id="@+id/home_num"
+                    android:layout_toRightOf="@id/home"
+                    style="@style/tab_menu_bgnum"
+                    android:text="99+"
+                    android:visibility="gone" />                
+            </RelativeLayout>
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/ly_like"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+            <RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+                <TextView 
+                    android:id="@+id/like"
+                    android:drawableTop="@drawable/like_selector"
+                    style="@style/tab_menu_text"
+                    android:text="like"
+                    />
+                <TextView 
+                    android:id="@+id/like_num"
+                    android:layout_toRightOf="@id/like"
+                    style="@style/tab_menu_bgnum"
+                    android:text="99+"
+                    android:visibility="gone" />                
+            </RelativeLayout>
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/ly_location"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+                <TextView 
+                    android:id="@+id/location"
+                    android:drawableTop="@drawable/location_selector"
+                    style="@style/tab_menu_text"
+                    android:text="location"
+                    />
+                <TextView 
+                    android:id="@+id/location_num"
+                    android:layout_toRightOf="@id/location"
+                    style="@style/tab_menu_bgnum"
+                    android:text="99+"
+                    android:visibility="gone" />                
+            </RelativeLayout>
+       </RelativeLayout>
+       <RelativeLayout 
+          android:id="@+id/ly_me"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center"
+          >
+          <RelativeLayout 
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="5dp"
+              >
+              <TextView 
+                  android:id="@+id/me"
+                  android:drawableTop="@drawable/person_selector"
+                  style="@style/tab_menu_text"
+                  android:text="me"
+                  />
+              <TextView 
+                  android:id="@+id/me_num"
+                  android:layout_toRightOf="@id/me"
+                  style="@style/tab_menu_bgnum"
+                  android:text="99+"
+                  android:visibility="gone" />                
+          </RelativeLayout>
+      </RelativeLayout>    
+    </LinearLayout>
+    
+    <View 
+        android:id="@+id/div_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/menu_bar"
+        android:background="@color/text_gray"
+        />
+    
+    <FrameLayout 
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:layout_above="@id/menu_bar"
+        android:layout_below="@id/title_bar"
+        >
+        
+        
+    </FrameLayout>
+</RelativeLayout>
